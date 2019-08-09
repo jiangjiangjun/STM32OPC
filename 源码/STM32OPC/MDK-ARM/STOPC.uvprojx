@@ -338,7 +338,7 @@
               <MiscControls>--diag_suppress=177,1293</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F767xx,USE_HAL_DRIVER,STM32F767xx,UA_ARCHITECTURE_FREERTOSLWIP,OPEN62541_FEERTOS_USE_OWN_MEM</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;                 ../Drivers/STM32F7xx_HAL_Driver/Inc;                 ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;                 ../Middlewares/Third_Party/FreeRTOS/Source/include;                 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;                 ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1;                 ../Drivers/CMSIS/Device/ST/STM32F7xx/Include;                 ../Drivers/CMSIS/Include;                 ../Middlewares/Third_Party/LwIP/src/include;                 ../Middlewares/Third_Party/LwIP/system;                 ../Middlewares/Third_Party/LwIP/src/include/netif/ppp;                 ../Middlewares/Third_Party/LwIP/src/include/lwip;                 ../Middlewares/Third_Party/LwIP/src/include/lwip/apps;                 ../Middlewares/Third_Party/LwIP/src/include/lwip/priv;                 ../Middlewares/Third_Party/LwIP/src/include/lwip/prot;                 ../Middlewares/Third_Party/LwIP/src/include/netif;                 ../Middlewares/Third_Party/LwIP/src/include/posix;                 ../Middlewares/Third_Party/LwIP/src/include/posix/sys;                 ../Middlewares/Third_Party/LwIP/system/arch;                 ..\open62541;                 ..\PCF8574</IncludePath>
+              <IncludePath>../Inc;                       ../Drivers/STM32F7xx_HAL_Driver/Inc;                       ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;                       ../Middlewares/Third_Party/FreeRTOS/Source/include;                       ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;                       ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1;                       ../Drivers/CMSIS/Device/ST/STM32F7xx/Include;                       ../Drivers/CMSIS/Include;                       ../Middlewares/Third_Party/LwIP/src/include;                       ../Middlewares/Third_Party/LwIP/system;                       ../Middlewares/Third_Party/LwIP/src/include/netif/ppp;                       ../Middlewares/Third_Party/LwIP/src/include/lwip;                       ../Middlewares/Third_Party/LwIP/src/include/lwip/apps;                       ../Middlewares/Third_Party/LwIP/src/include/lwip/priv;                       ../Middlewares/Third_Party/LwIP/src/include/lwip/prot;                       ../Middlewares/Third_Party/LwIP/src/include/netif;                       ../Middlewares/Third_Party/LwIP/src/include/posix;                       ../Middlewares/Third_Party/LwIP/src/include/posix/sys;                       ../Middlewares/Third_Party/LwIP/system/arch;                       ..\open62541;                       ..\PCF8574</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -403,6 +403,11 @@
               <FilePath>../Src/gpio.c</FilePath>
             </File>
             <File>
+              <FileName>fmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Src/fmc.c</FilePath>
+            </File>
+            <File>
               <FileName>freertos.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/freertos.c</FilePath>
@@ -451,6 +456,16 @@
               <FileName>stm32f7xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f7xx_ll_fmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f7xx_hal_sdram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.c</FilePath>
             </File>
             <File>
               <FileName>stm32f7xx_hal_tim.c</FileName>

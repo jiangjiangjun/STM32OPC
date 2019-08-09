@@ -24,6 +24,7 @@
 #include "lwip.h"
 #include "usart.h"
 #include "gpio.h"
+#include "fmc.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -32,7 +33,9 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+#if configAPPLICATION_ALLOCATED_HEAP == 1
+    __align(64) uint8_t ucHeap[ configTOTAL_HEAP_SIZE ] __attribute__((at(0xC0000000)));
+#endif
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -93,8 +96,9 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART1_UART_Init();
+  MX_FMC_Init();
   /* USER CODE BEGIN 2 */
-
+  MX_SDRAM_InitEx();
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

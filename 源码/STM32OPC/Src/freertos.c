@@ -173,8 +173,8 @@ void TCPTask(void const * argument)
 {
   /* USER CODE BEGIN TCPTask */
   /* Infinite loop */
-#if 1
-    #if 1
+#if 0
+    #if 0
 	/* Create a client and connect */
 	UA_Client *client = UA_Client_new();
     UA_ClientConfig *config = UA_Client_getConfig(client);
@@ -274,13 +274,30 @@ void TCPTask(void const * argument)
 * @retval None
 */
 /* USER CODE END Header_LedTask */
+uint8_t test_buf[50000]__attribute__((at(0xC0100000)));
 void LedTask(void const * argument)
 {
   /* USER CODE BEGIN LedTask */
+  //uint8_t test_buf[50000]__attribute__((at(0xC0100000)));
+  uint32_t Buf_Addr;
+  uint16_t i;
+  
+  Buf_Addr = (uint32_t)&test_buf[0];
+  printf("ABCD");
+  for(i=0;i<2000;i++){
+      test_buf[i] = (uint8_t)i;
+  }
+  printf("SDFGH");
   /* Infinite loop */
   for(;;)
   {
     HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
+    printf("%#x \r\n",Buf_Addr);
+    
+    for(i=0;i<200;i++){
+        printf("%d ",test_buf[i]);
+    }
+    printf("\r\n");
     osDelay(200);
   }
   /* USER CODE END LedTask */
